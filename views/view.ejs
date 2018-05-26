@@ -14,8 +14,31 @@
 </head>
 
 <body>
-    <h1>Hello, world!</h1>
+    <div class="container">
+        <table class="table table-sm table-dark">
+            <thead>
+                <tr>
+                    <th scope="col">Articles</th>
+                    <th scope="col">Auther</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% for(let i = 0; i < data.length; i++) { %>
+                    <tr>
 
+                        <td>
+                            <%= data[i].Articles %>
+                        </td>
+                        <td>
+                            <%= data[i].Author %>
+                        </td>
+
+                    </tr>
+                    <% } %>
+
+            </tbody>
+        </table>
+    </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
