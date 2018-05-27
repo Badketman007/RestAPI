@@ -26,7 +26,11 @@ const user = [
 app.set("view engine", "ejs");
 
 app.get("/", (req, res) => {
-  res.render("view", { data: user });
+  res.render("view");
+});
+
+app.get("/api/content", (req, res) => {
+  res.json(user);
 });
 
 app.listen(3000, () => {
